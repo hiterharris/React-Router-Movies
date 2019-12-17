@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <div>
-      <Route path='/'>
+      <Route>
         <SavedList list={savedList} />
       </Route>
       <div>Replace this Div with your Routes</div>
@@ -22,7 +22,7 @@ const App = () => {
         <MovieList />
       </Route>
       <Route path='/movies/:movieID'>
-        <Movie />
+        <Movie addToSavedList={addToSavedList} />
       </Route>
 
     </div>
